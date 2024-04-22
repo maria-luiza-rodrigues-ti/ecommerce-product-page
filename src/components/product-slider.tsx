@@ -72,10 +72,10 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
               <img
                 src={image.thumb}
                 alt={image.alt}
-                className={`rounded-[10px] opacity-50 transition-all hover:opacity-100 ${
+                className={`rounded-[10px]  transition-all hover:opacity-100 ${
                   index === isButtonActive
                     ? "border-2 border-orange opacity-100"
-                    : ""
+                    : "opacity-50"
                 }`}
               />
             </SwiperSlide>

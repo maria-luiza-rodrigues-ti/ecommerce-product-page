@@ -102,33 +102,33 @@ export function App() {
         </nav>
       </header>
 
-      <main className="mt-[90px] max-w-[1100px] mx-auto flex flex-row gap-[125px]">
+      <main className="md:mt-[90px] max-w-[1100px] mx-auto flex flex-row flex-wrap gap-6 md:gap-[125px]">
         <ProductSlider onProductImages={handleProductSliderImages} />
 
-        <div className="flex flex-col justify-center">
-          <span className=" text-sm font-bold text-orange tracking-[.125rem] uppercase mb-[27px]">
+        <div className="flex flex-col justify-center px-6 md:px-0">
+          <span className=" text-sm font-bold text-orange tracking-[.125rem] uppercase mb-5 md:mb-[27px]">
             {product.brand}
           </span>
           <h1 className=" text-[2.75rem]/[3rem] font-bold text-very-dark-blue max-w-[440px]">
             {product.title}
           </h1>
-          <p className=" text-dark-grayish-blue text-base/[26px] mt-7 max-w-[445px]">
+          <p className=" text-dark-grayish-blue text-base/[26px] mt-4 md:mt-7 max-w-[445px]">
             {product.description}
           </p>
-          <div className="grid grid-cols-2 gap-x-4 gap-y-[10px] items-center mt-7 mb-8 max-w-max-content">
+          <div className="grid grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-[10px] items-center mt-4 md:mt-7 mb-8 md:max-w-max-content">
             <span className="inline-block text-[1.75rem] font-bold text-very-dark-blue">
               {`$ ${product.discountedPrice}`}
             </span>
             <span className="inline-block text-orange font-bold rounded-md bg-pale-orange h-max-content max-w-max-content px-2 py-1">
               {`${product.discount}%`}
             </span>
-            <span className="inline-block text-base/[1.625rem] font-bold text-grayish-blue line-through">
+            <span className="inline-block text-base/[1.625rem] font-bold text-grayish-blue line-through text-right md:text-left">
               {`$ ${product.price}`}
             </span>
           </div>
 
-          <div className="flex gap-4">
-            <div className="rounded-[10px] bg-light-grayish-blue flex items-center gap-11 px-4 h-14 w-[157px]">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="rounded-[10px] bg-light-grayish-blue flex justify-between items-center gap-11 px-4 h-14 w-full md:w-[157px]">
               <button onClick={handleRemoveOneProduct}>
                 <img
                   src={Minus}
@@ -148,7 +148,7 @@ export function App() {
             <button
               disabled={hasAnyProduct}
               onClick={handleAddProductsToCart}
-              className="rounded-[10px] bg-orange text-white h-14 flex justify-center items-center gap-4 flex-1 opacity-60 transition-all hover:opacity-100 disabled:cursor-not-allowed disabled:hover:opacity-60"
+              className="rounded-[10px] bg-orange text-white h-14 flex justify-center items-center gap-4 md:flex-1 opacity-60 transition-all hover:opacity-100 disabled:cursor-not-allowed disabled:hover:opacity-60"
             >
               <img src={AddToCartIcon} alt="" />
               Add to cart

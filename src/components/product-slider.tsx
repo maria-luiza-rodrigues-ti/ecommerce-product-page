@@ -5,8 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
+import "swiper/css/navigation";
 
-import { FreeMode, Thumbs } from "swiper/modules";
+import { FreeMode, Thumbs, Navigation } from "swiper/modules";
 import { ProductImageProps } from "../app";
 
 interface ProductSliderProps {
@@ -23,16 +24,24 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
   }
 
   return (
-    <div className="max-w-[445px]">
+    <div className="max-w-full md:max-w-[445px]">
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
+        breakpoints={{
+          320: {
+            spaceBetween: 0,
+          },
+          600: {
+            spaceBetween: 10,
+          },
+        }}
         navigation={true}
         thumbs={{
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
-        modules={[FreeMode, Thumbs]}
-        className="mb-8"
+        modules={[FreeMode, Thumbs, Navigation]}
+        className="mb-0 md:mb-8"
       >
         {images &&
           images.map((image) => (
@@ -40,7 +49,7 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
               <img
                 src={image.image}
                 alt={image.alt}
-                className="rounded-[15px]"
+                className="md:rounded-[15px]"
               />
             </SwiperSlide>
           ))}
@@ -52,6 +61,7 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Thumbs]}
+        className="hidden md:block"
       >
         {images &&
           images.map((image, index) => (

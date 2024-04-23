@@ -59,7 +59,7 @@ export function App() {
   return (
     <>
       <Header onAddProductToCart={addProductToMinicart} />
-      <main className="lg::mt-[90px] max-w-[1100px] mx-auto flex flex-row flex-wrap gap-6 lg:gap-[125px]">
+      <main className="lg:mt-[90px] max-w-[1100px] mx-auto flex flex-row flex-wrap gap-6 lg:gap-[125px] relative z-0">
         <ProductSlider onProductImages={handleProductSliderImages} />
 
         <div className="flex flex-col w-full lg:w-max justify-center px-6 lg:px-0">

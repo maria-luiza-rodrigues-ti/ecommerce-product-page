@@ -38,7 +38,7 @@ export function Minicart({ onAddProductToCart }: MinicartProps) {
             className="opacity-60 transition-all hover:opacity-100"
           />
           {quantityOfProductInTheMinicart ? (
-            <span className="absolute -top-2 left-2.5 text-[0.625rem] font-boldpy-[3px] px-[6px] rounded-md bg-orange text-white transition-all">
+            <span className="absolute lg:-top-2 left-2.5 text-[0.625rem] font-boldpy-[3px] px-[6px] rounded-md bg-orange text-white transition-all">
               {quantityOfProductInTheMinicart}
             </span>
           ) : null}
@@ -48,9 +48,8 @@ export function Minicart({ onAddProductToCart }: MinicartProps) {
       <DropdownMenu.Portal>
         <DropdownMenu.Content
           sideOffset={30}
-          align="end"
-          alignOffset={-94}
-          className="w-[22.5rem] bg-white rounded-[10px] shadow-minicart data-[side=top]:animate-slide-down data-[side=bottom]:animate-slide-up"
+          align="center"
+          className="w-[calc(100vw-2rem)] lg:w-[22.5rem] -translate-x-6 lg:translate-x-0 bg-white rounded-[10px] shadow-minicart data-[side=top]:animate-slide-down data-[side=bottom]:animate-slide-up"
         >
           <DropdownMenu.Label className="px-6 pt-6 pb-[1.688rem] text-very-dark-blue font-bold">
             Cart
@@ -75,7 +74,7 @@ export function Minicart({ onAddProductToCart }: MinicartProps) {
                     </span>
                   </div>
                 </div>
-                <button className="ml-[3px]">
+                <button className="ml-auto lg:ml-[3px]">
                   <img src={DeleteIcon} alt="" />
                 </button>
               </DropdownMenu.Item>

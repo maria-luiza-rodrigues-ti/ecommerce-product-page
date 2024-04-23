@@ -24,7 +24,7 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
   }
 
   return (
-    <div className="max-w-full md:max-w-[445px]">
+    <div className="max-w-full lg:max-w-[445px]">
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -41,7 +41,7 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         modules={[FreeMode, Thumbs, Navigation]}
-        className="mb-0 md:mb-8"
+        className="mb-0 lg:mb-8"
       >
         {images &&
           images.map((image) => (
@@ -49,7 +49,7 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
               <img
                 src={image.image}
                 alt={image.alt}
-                className="md:rounded-[15px]"
+                className="lg:rounded-[15px]"
               />
             </SwiperSlide>
           ))}
@@ -61,7 +61,7 @@ export function ProductSlider({ onProductImages }: ProductSliderProps) {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Thumbs]}
-        className="hidden md:block"
+        className="hidden lg:block"
       >
         {images &&
           images.map((image, index) => (

@@ -59,17 +59,17 @@ export function App() {
   return (
     <>
       <Header onAddProductToCart={addProductToMinicart} />
-      <main className="md:mt-[90px] max-w-[1100px] mx-auto flex flex-row flex-wrap gap-6 md:gap-[125px]">
+      <main className="lg::mt-[90px] max-w-[1100px] mx-auto flex flex-row flex-wrap gap-6 lg:gap-[125px]">
         <ProductSlider onProductImages={handleProductSliderImages} />
 
-        <div className="flex flex-col justify-center px-6 md:px-0">
+        <div className="flex flex-col w-full lg:w-max justify-center px-6 lg:px-0">
           <span className=" text-sm font-bold text-orange tracking-[.125rem] uppercase mb-5 md:mb-[27px]">
             {product.brand}
           </span>
-          <h1 className=" text-[2.75rem]/[3rem] font-bold text-very-dark-blue max-w-[440px]">
+          <h1 className=" text-[2.75rem]/[3rem] font-bold text-very-dark-blue lg:max-w-[440px]">
             {product.title}
           </h1>
-          <p className=" text-dark-grayish-blue text-base/[26px] mt-4 md:mt-7 max-w-[445px]">
+          <p className=" text-dark-grayish-blue text-base/[26px] mt-4 md:mt-7 lg:max-w-[445px]">
             {product.description}
           </p>
           <div className="grid grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-[10px] items-center mt-4 md:mt-7 mb-8 md:max-w-max-content">
@@ -84,8 +84,8 @@ export function App() {
             </span>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="rounded-[10px] bg-light-grayish-blue flex justify-between items-center gap-11 px-4 h-14 w-full md:w-[157px]">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="rounded-[10px] bg-light-grayish-blue flex justify-between items-center gap-11 px-4 h-14 w-full lg:w-[157px]">
               <button onClick={handleRemoveOneProduct}>
                 <img
                   src={Minus}
@@ -105,7 +105,7 @@ export function App() {
             <button
               disabled={hasAnyProduct}
               onClick={handleAddProductsToCart}
-              className="rounded-[10px] bg-orange text-white h-14 flex justify-center items-center gap-4 md:flex-1 opacity-60 transition-all hover:opacity-100 disabled:cursor-not-allowed disabled:hover:opacity-60"
+              className="rounded-[10px] bg-orange text-white h-14 flex justify-center items-center gap-4 lg:flex-1 opacity-60 transition-all hover:opacity-100 disabled:cursor-not-allowed disabled:hover:opacity-60"
             >
               <img src={AddToCartIcon} alt="" />
               Add to cart

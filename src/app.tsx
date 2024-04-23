@@ -1,14 +1,11 @@
-import Logo from "./assets/logo.svg";
-
 import data from "../products.json";
 
-import UserAvatar from "./assets/image-avatar.png";
 import Minus from "./assets/icon-minus.svg";
 import Plus from "./assets/icon-plus.svg";
 import AddToCartIcon from "./assets/icon-cart-white.svg";
 import { ProductSlider } from "./components/product-slider";
 import { useState } from "react";
-import { Minicart } from "./components/minicart";
+import { Header } from "./components/header";
 
 export interface ProductImageProps {
   id: number;
@@ -61,47 +58,7 @@ export function App() {
 
   return (
     <>
-      <header className="flex justify-between items-end max-w-[1100px] mx-auto pt-7 border-b border-gray-100 ">
-        <div className="flex gap-14">
-          <img src={Logo} alt="Sneakers Logo" className="max-h-5" />
-          <nav>
-            <ul className="flex gap-8 items-center ">
-              <li className="text-dark-grayish-blue pb-[41px] border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Collections</a>
-              </li>
-              <li className="text-dark-grayish-blue pb-[41px] border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Men</a>
-              </li>
-              <li className="text-dark-grayish-blue pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Women</a>
-              </li>
-              <li className="text-dark-grayish-blue pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">About</a>
-              </li>
-              <li className="text-dark-grayish-blue pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <nav>
-          <ul className="flex items-end gap-[46px]  ">
-            <li className="flex pb-12 ">
-              <Minicart onAddProductToCart={addProductToMinicart} />
-            </li>
-            <li className="pb-[34px]">
-              <a href="#">
-                <img
-                  src={UserAvatar}
-                  className="max-h-[50px] border-2 rounded-full border-transparent transition hover:border-orange"
-                />
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Header onAddProductToCart={addProductToMinicart} />
       <main className="md:mt-[90px] max-w-[1100px] mx-auto flex flex-row flex-wrap gap-6 md:gap-[125px]">
         <ProductSlider onProductImages={handleProductSliderImages} />
 

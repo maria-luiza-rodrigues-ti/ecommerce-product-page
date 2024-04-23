@@ -4,14 +4,12 @@ import UserAvatar from "../assets/image-avatar.png";
 import { Minicart } from "../components/minicart";
 import { ProductType } from "@/app";
 import { MenuMobile } from "./menu-mobile";
-import { useEffect, useState } from "react";
 
 interface HeaderProps {
   onAddProductToCart: () => ProductType | undefined;
 }
 
 export function Header({ onAddProductToCart }: HeaderProps) {
-  const [isMobile, setIsMobile] = useState(false);
   function sendProductToMinicart() {
     if (!onAddProductToCart) return;
 
@@ -20,46 +18,32 @@ export function Header({ onAddProductToCart }: HeaderProps) {
     return productSentToMinicart;
   }
 
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth < 1024) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    }
-
-    window.addEventListener("resize", handleResize);
-  }, [isMobile]);
-
   return (
-    <header className="flex justify-between items-end max-w-[1100px] mx-auto p-6 lg:p-0 lg:pt-7 lg:px-6 xl:px-0 border-b border-gray-100 ">
+    <header className="flex justify-between items-center lg:items-end max-w-[1100px] mx-auto p-6 lg:p-0 lg:pt-7 lg:px-6 xl:px-0 border-b border-gray-100 ">
       <div className="flex gap-4 lg:gap-14">
-        {isMobile ? <MenuMobile className="lg:hidden" /> : null}
+        <MenuMobile className="lg:hidden" />
 
         <img src={Logo} alt="Sneakers Logo" className="max-h-5" />
 
-        {isMobile ? null : (
-          <nav>
-            <ul className="flex gap-8 items-center ">
-              <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Collections</a>
-              </li>
-              <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Men</a>
-              </li>
-              <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Women</a>
-              </li>
-              <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">About</a>
-              </li>
-              <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        )}
+        <nav className="hidden lg:flex">
+          <ul className="flex gap-8 items-center ">
+            <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
+              <a href="#">Collections</a>
+            </li>
+            <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
+              <a href="#">Men</a>
+            </li>
+            <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
+              <a href="#">Women</a>
+            </li>
+            <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
+              <a href="#">About</a>
+            </li>
+            <li className="text-dark-grayish-blue md:pb-[41px]  border-b-4 border-transparent transition-all hover:border-orange hover:text-very-dark-blue">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
       <nav>

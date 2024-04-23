@@ -13,26 +13,26 @@
         {
           "id": 1,
           "alt": "Sneakers Front View",
-          "image": "./src/assets/image-product-1.jpg",
-          "thumb": "./src/assets/image-product-1-thumbnail.jpg"
+          "image": "/assets/image-product-1.jpg",
+          "thumb": "/assets/image-product-1-thumbnail.jpg"
         },
         {
           "id": 2,
           "alt": "Sneakers Back View",
-          "image": "./src/assets/image-product-2.jpg",
-          "thumb": "./src/assets/image-product-2-thumbnail.jpg"
+          "image": "/assets/image-product-2.jpg",
+          "thumb": "/assets/image-product-2-thumbnail.jpg"
         },
         {
           "id": 3,
           "alt": "Sneakers Diagonal View",
-          "image": "./src/assets/image-product-3.jpg",
-          "thumb": "./src/assets/image-product-3-thumbnail.jpg"
+          "image": "/assets/image-product-3.jpg",
+          "thumb": "/assets/image-product-3-thumbnail.jpg"
         },
         {
           "id": 4,
           "alt": "Sneakers Lateral View",
-          "image": "./src/assets/image-product-4.jpg",
-          "thumb": "./src/assets/image-product-4-thumbnail.jpg"
+          "image": "/assets/image-product-4.jpg",
+          "thumb": "/assets/image-product-4-thumbnail.jpg"
         }
       ]
     }

@@ -1,5 +1,5 @@
-import Logo from "../assets/logo.svg";
-import UserAvatar from "../assets/image-avatar.png";
+import Logo from "/assets/logo.svg";
+import UserAvatar from "/assets/image-avatar.png";
 
 import { Minicart } from "../components/minicart";
 import { ProductType } from "@/app";

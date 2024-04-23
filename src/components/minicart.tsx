@@ -1,6 +1,6 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import CartIcon from "../assets/icon-cart-dark.svg";
-import DeleteIcon from "../assets/icon-delete.svg";
+import CartIcon from "/assets/icon-cart-dark.svg";
+import DeleteIcon from "/assets/icon-delete.svg";
 import { ProductType } from "@/app";
 import { useEffect, useState } from "react";
 

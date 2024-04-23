@@ -1,8 +1,8 @@
 import data from "../products.json";
 
-import Minus from "./assets/icon-minus.svg";
-import Plus from "./assets/icon-plus.svg";
-import AddToCartIcon from "./assets/icon-cart-white.svg";
+import Minus from "/assets/icon-minus.svg";
+import Plus from "/assets/icon-plus.svg";
+import AddToCartIcon from "/assets/icon-cart-white.svg";
 import { ProductSlider } from "./components/product-slider";
 import { useState } from "react";
 import { Header } from "./components/header";

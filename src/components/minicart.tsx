@@ -43,7 +43,7 @@ export function Minicart({ onAddProductToCart }: MinicartProps) {
             className="opacity-60 transition-all hover:opacity-100"
           />
           {quantityOfProductInTheMinicart ? (
-            <span className="absolute lg:-top-2 left-2.5 text-[0.625rem] font-boldpy-[3px] px-[6px] rounded-md bg-orange text-white transition-all">
+            <span className="absolute top-0 md:top-2 lg:-top-2 left-2.5 text-[0.625rem] font-boldpy-[3px] px-[6px] rounded-md bg-orange text-white transition-all">
               {quantityOfProductInTheMinicart}
             </span>
           ) : null}

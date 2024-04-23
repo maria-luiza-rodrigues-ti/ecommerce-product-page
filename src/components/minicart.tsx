@@ -28,6 +28,11 @@ export function Minicart({ onAddProductToCart }: MinicartProps) {
     }
   }, [productInTheMinicart?.quantity]);
 
+  function onDeleteProduct() {
+    setProductInTheMinicart(undefined);
+    setQuantityOfProductInTheMinicart(0)
+  }
+
   return (
     <DropdownMenu.Root defaultOpen={false}>
       <DropdownMenu.Trigger asChild>
@@ -74,7 +79,7 @@ export function Minicart({ onAddProductToCart }: MinicartProps) {
                     </span>
                   </div>
                 </div>
-                <button className="ml-auto lg:ml-[3px]">
+                <button onClick={onDeleteProduct} className="ml-auto lg:ml-[3px]">
                   <img src={DeleteIcon} alt="" />
                 </button>
               </DropdownMenu.Item>
